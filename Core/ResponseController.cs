@@ -1,8 +1,4 @@
-﻿using Core;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Response.Core
 {
@@ -10,7 +6,7 @@ namespace Response.Core
     {
         [NonAction]
         [ApiExplorerSettings(IgnoreApi = true)]
-        public ActionResult Ok(IResponse result)
+        public new ActionResult Response(IResponse result)
         {
             if (!result.succeeded)
                 return BadRequest(result);

@@ -1,4 +1,3 @@
-using Core;
 using Microsoft.AspNetCore.Mvc;
 using Response.Core;
 
@@ -29,25 +28,25 @@ namespace Response.Simulator.Controllers
         [HttpGet]
         public ActionResult<WeatherForecast[]> GetAction()
         {
-            return Ok(GetResponse());
+            return Response(GetResponse());
         }
 
         [HttpGet]
         public async Task<ActionResult> GetTaskActionAsync()
         {
-            return Ok(await GetResponseAsync());
+            return Response(await GetResponseAsync());
         }
 
         [HttpGet]
         public ActionResult GetPaginatedAsync()
         {
-            return Ok(GetPaginatedResponseAsync(1, 10));
+            return Response(GetPaginatedResponseAsync(1, 10));
         }
 
         [HttpGet]
         public ActionResult FailedRequest()
         {
-            return Ok(FailObject());
+            return Response(FailObject());
         }
 
 

@@ -1,11 +1,39 @@
 <Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Nullable>enable</Nullable>
+		<Authors>Andifon Etim</Authors>
+		<Company>Dynamic M3gatech </Company>
+		<Product>Service Response Wrapper</Product>
+		<RepositoryUrl></RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageId>ResponseWrapperUtil</PackageId>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Description>
+			Response Wrapper is a simple service wrapper to help standardise api service response to consumers.
+		</Description>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageReleaseNotes>Initial release</PackageReleaseNotes>
+		<PackageTags>soa, api, service</PackageTags>
+		<PackageProjectUrl>https://github.com/AndyEV/ResponseHelper</PackageProjectUrl>
+		<PackageLicenseFile>License.txt</PackageLicenseFile>
+		<AssemblyVersion>1.0.1</AssemblyVersion>
+		<FileVersion>1.0.1</FileVersion>
+		<Version>1.0.1</Version>
+		<AssemblyName>ResponseWrapperUtil</AssemblyName>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
 
-  <ItemGroup>
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="License.txt" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+	<ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.32" />
   </ItemGroup>

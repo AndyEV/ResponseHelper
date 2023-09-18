@@ -15,7 +15,7 @@ namespace Response.Core
 
         public List<T> Data { get; set; }
 
-        internal PaginatedRespose(bool succeeded, List<T> data = default, string message = null, int count = 0, int page = 1, int pageSize = 10)
+        internal PaginatedRespose(bool succeeded, List<T> data, string message = "", int count = 0, int page = 1, int pageSize = 10)
         {
             Data = data;
             CurrentPage = page;
@@ -33,7 +33,7 @@ namespace Response.Core
 
         public static PaginatedRespose<T> Success(List<T> data, int count, int page, int pageSize)
         {
-            return new PaginatedRespose<T>(true, data, null, count, page, pageSize);
+            return new PaginatedRespose<T>(true, data: data, count: count, page: page, pageSize: pageSize);
         }
 
         public int CurrentPage { get; set; }

@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace Response.Core
+namespace ResponseWrapperUtil.Core
 {
     public class PaginatedRespose<T> : Response
     {

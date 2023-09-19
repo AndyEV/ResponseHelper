@@ -1,4 +1,4 @@
-namespace Response.Simulator
+namespace ResponseWrapperUtil.Simulator
 {
     public class WeatherForecast
     {

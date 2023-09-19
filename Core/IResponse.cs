@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
-namespace Response.Core
+namespace ResponseWrapperUtil.Core
 {
     public interface IResponse
     {

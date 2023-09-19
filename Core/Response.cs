@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Response.Core
+namespace ResponseWrapperUtil.Core
 {
     public class Response : IResponse
     {

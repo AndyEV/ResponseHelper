@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Response.Test
+namespace ResponseWrapperUtil.Test
 {
     public class UnitTest1
     {

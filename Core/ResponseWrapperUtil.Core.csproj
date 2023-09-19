@@ -17,9 +17,9 @@
 		<PackageTags>soa, api, service</PackageTags>
 		<PackageProjectUrl>https://github.com/AndyEV/ResponseHelper</PackageProjectUrl>
 		<PackageLicenseFile>License.txt</PackageLicenseFile>
-		<AssemblyVersion>1.0.1</AssemblyVersion>
-		<FileVersion>1.0.1</FileVersion>
-		<Version>1.0.1</Version>
+		<AssemblyVersion>1.0.2</AssemblyVersion>
+		<FileVersion>1.0.2</FileVersion>
+		<Version>1.0.2</Version>
 		<AssemblyName>ResponseWrapperUtil</AssemblyName>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>

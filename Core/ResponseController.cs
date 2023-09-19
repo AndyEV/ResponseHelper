@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Response.Core
+namespace ResponseWrapperUtil.Core
 {
     public class ResponseController : ControllerBase
     {

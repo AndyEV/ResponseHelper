@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Response.Core;
+using ResponseWrapperUtil.Core;
 
-namespace Response.Simulator.Controllers
+namespace ResponseWrapperUtil.Simulator.Controllers
 {
     [ApiController]
     [Route("[controller]/[action]")]

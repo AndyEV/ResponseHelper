@@ -14,16 +14,16 @@ namespace ResponseWrapperUtil.Core
 
         public bool succeeded { get; set; }
 
-        public int? statuscode { get; set; }
+        public int statuscode { get; set; }
 
         public static IResponse Fail()
         {
             return new Response { succeeded = false, statuscode = 400 };
         }
 
-        public static IResponse Fail(string message)
+        public static IResponse Fail(string message, int statuscode = 400)
         {
-            return new Response { succeeded = false, message = message, statuscode = 400 };
+            return new Response { succeeded = false, message = message, statuscode = statuscode };
         }
 
         public static Task<IResponse> FailAsync()
@@ -31,9 +31,9 @@ namespace ResponseWrapperUtil.Core
             return Task.FromResult(Fail());
         }
 
-        public static Task<IResponse> FailAsync(string message)
+        public static Task<IResponse> FailAsync(string message, int statuscode = 400)
         {
-            return Task.FromResult(Fail(message));
+            return Task.FromResult(Fail(message, statuscode));
         }
 
         public static IResponse Success()
@@ -41,9 +41,9 @@ namespace ResponseWrapperUtil.Core
             return new Response { succeeded = true, statuscode = 200 };
         }
 
-        public static IResponse Success(string message)
+        public static IResponse Success(string message, int statuscode = 200)
         {
-            return new Response { succeeded = true, message = message, statuscode = 200 };
+            return new Response { succeeded = true, message = message, statuscode = statuscode };
         }
 
         public static Task<IResponse> SuccessAsync()
@@ -51,9 +51,9 @@ namespace ResponseWrapperUtil.Core
             return Task.FromResult(Success());
         }
 
-        public static Task<IResponse> SuccessAsync(string message)
+        public static Task<IResponse> SuccessAsync(string message, int statuscode = 200)
         {
-            return Task.FromResult(Success(message));
+            return Task.FromResult(Success(message, statuscode));
         }
     }
 
@@ -70,9 +70,9 @@ namespace ResponseWrapperUtil.Core
             return new Response<T> { succeeded = false, statuscode = 400 };
         }
 
-        public new static Response<T> Fail(string message)
+        public new static Response<T> Fail(string message, int statuscode = 400)
         {
-            return new Response<T> { succeeded = false, message = message, statuscode = 400 };
+            return new Response<T> { succeeded = false, message = message, statuscode = statuscode };
         }
 
         public new static Task<Response<T>> FailAsync()
@@ -80,9 +80,9 @@ namespace ResponseWrapperUtil.Core
             return Task.FromResult(Fail());
         }
 
-        public new static Task<Response<T>> FailAsync(string message)
+        public new static Task<Response<T>> FailAsync(string message, int statuscode = 400)
         {
-            return Task.FromResult(Fail(message));
+            return Task.FromResult(Fail(message, statuscode));
         }
 
         public new static Response<T> Success()
@@ -90,19 +90,19 @@ namespace ResponseWrapperUtil.Core
             return new Response<T> { succeeded = true, statuscode = 200 };
         }
 
-        public new static Response<T> Success(string message)
+        public new static Response<T> Success(string message, int statuscode = 200)
         {
-            return new Response<T> { succeeded = true, message = message, statuscode = 200 };
+            return new Response<T> { succeeded = true, message = message, statuscode = statuscode };
         }
 
-        public static Response<T> Success(T data)
+        public static Response<T> Success(T data, int statuscode = 200)
         {
-            return new Response<T> { succeeded = true, data = data, statuscode = 200 };
+            return new Response<T> { succeeded = true, data = data, statuscode = statuscode };
         }
 
-        public static Response<T> Success(T data, string message)
+        public static Response<T> Success(T data, string message, int statuscode = 200)
         {
-            return new Response<T> { succeeded = true, data = data, message = message, statuscode = 200 };
+            return new Response<T> { succeeded = true, data = data, message = message, statuscode = statuscode };
         }
 
         public new static Task<Response<T>> SuccessAsync()
@@ -110,19 +110,19 @@ namespace ResponseWrapperUtil.Core
             return Task.FromResult(Success());
         }
 
-        public new static Task<Response<T>> SuccessAsync(string message)
+        public new static Task<Response<T>> SuccessAsync(string message, int statuscode = 200)
         {
-            return Task.FromResult(Success(message));
+            return Task.FromResult(Success(message, statuscode));
         }
 
-        public static Task<Response<T>> SuccessAsync(T data)
+        public static Task<Response<T>> SuccessAsync(T data, int statuscode = 200)
         {
-            return Task.FromResult(Success(data));
+            return Task.FromResult(Success(data, statuscode));
         }
 
-        public static Task<Response<T>> SuccessAsync(T data, string message)
+        public static Task<Response<T>> SuccessAsync(T data, string message, int statuscode = 200)
         {
-            return Task.FromResult(Success(data, message));
+            return Task.FromResult(Success(data, message, statuscode));
         }
     }
 

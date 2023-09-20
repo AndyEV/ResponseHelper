@@ -9,9 +9,9 @@ namespace ResponseWrapperUtil.Core
         public new ActionResult Response(IResponse result)
         {
             if (!result.succeeded)
-                return BadRequest(result);
+                return StatusCode(result.statuscode, result);
 
-            return base.Ok(result);
+            return base.StatusCode(result.statuscode, result);
         }
     }
 }

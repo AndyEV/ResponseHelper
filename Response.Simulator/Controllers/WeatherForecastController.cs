@@ -51,7 +51,7 @@ namespace ResponseWrapperUtil.Simulator.Controllers
 
 
         [NonAction]
-        public IResponse<WeatherForecast[]> GetResponse() 
+        public IResponse<WeatherForecast[]> GetResponse()
         {
             return Response<WeatherForecast[]>.Success(Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
